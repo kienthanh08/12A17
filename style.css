@@ -4,6 +4,12 @@
   font-size: 25pt;
 }
 
+.border{
+  display:flex;
+  flex-direction:column;
+  height:100vh;
+}
+,header{
 .noidung{
   color: black;
   font-style: normal;
