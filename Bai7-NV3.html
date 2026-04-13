@@ -1,15 +1,24 @@
+<DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
+        <tiltle>Phản hồi</tiltle>
     </head>
     <body>
-        <p id ="kq" ></p>
+      <div> style="text-align: center; margin-top: 50px;">
+          <h1>Cảm ơn bạn đã góp ý</h1>
+          <p id="kq"></p>
+          <button onclick="window.history.back()">Quay lại</button>
+      </div>
         <script>
             let pp = new URLSearchParams(window.location.search);
-            let ten =pp.get("ten");
-            let dc=pp.get("diachi");
-            let yk=pp.get("comment");
-            document.getElementById("kq").innerHTML = "Cảm ơn bạn " +ten+" email: "+dc+" đã góp ý <br><br> Chúng tôi ghi nhận ý kiến của bạn như sau:<br>" + yk;
+            let ten =pp.get("txtTen");
+            let dc=pp.get("txtEmail");
+            let yk=pp.get("txtComment");
+            
+            document.getElementById("kq").innerHTML = 
+                "Cảm ơn bạn **" + ten +"**, email: " + dc +"** đã góp ý.<br><br>" + 
+                "Chúng tôi ghi nhận ý kiến của bạn như sau:<br>" + yk "</i>";
         </script>
     </body>
 </html>
